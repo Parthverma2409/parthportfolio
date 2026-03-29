@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: #0a0a0f;
+    --color-background-secondary: #111118;
+    --color-background-tertiary: #1a1a24;
+    --color-foreground: #f1f5f9;
+    --color-glass-bg: rgba(255, 255, 255, 0.05);
+    --color-glass-border: rgba(255, 255, 255, 0.1);
+  }
+
+  html.light {
+    --color-background: #f8fafc;
+    --color-background-secondary: #f1f5f9;
+    --color-background-tertiary: #e2e8f0;
+    --color-foreground: #0f172a;
+    --color-glass-bg: rgba(255, 255, 255, 0.7);
+    --color-glass-border: rgba(0, 0, 0, 0.1);
+  }
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
